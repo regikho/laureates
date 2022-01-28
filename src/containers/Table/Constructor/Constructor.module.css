@@ -1,0 +1,14 @@
+.constructor td {
+    color: #134563;
+    padding: 9px 8px;
+    transition: .3s linear;
+	border-bottom: 1px solid #ccc;
+	text-align: center;
+}
+
+.constructor td input {
+	padding: 9px 8px;
+	border: 1px solid #ccc;
+	outline: none;
+}
+

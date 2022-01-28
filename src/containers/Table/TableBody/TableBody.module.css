@@ -1,0 +1,18 @@
+.tableBody tr:hover{
+	color: #134563;
+	background-color: #eee;
+}
+
+.tableBody tr td {
+    color: #134563;
+    padding: 9px 8px;
+    transition: .3s linear;
+	border-bottom: 1px solid #ccc;
+	text-align: center;
+}
+
+.tableBody tr td img {
+	width: 25px;
+	height: 25px;
+	cursor: pointer;
+}

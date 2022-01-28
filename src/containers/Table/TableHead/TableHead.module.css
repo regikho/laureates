@@ -1,0 +1,17 @@
+.tableHead {
+    width: 100vh;
+	border: none;
+	text-align: center;
+}
+
+.tableHead tr td {
+	font-weight: bold;
+	color: #134563;
+	border-bottom: 2px solid #134563;	;
+	padding: 10px 8px;
+}
+
+.sort {
+	cursor: pointer;
+}
+

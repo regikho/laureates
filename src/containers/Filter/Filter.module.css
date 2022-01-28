@@ -1,0 +1,21 @@
+.filter {
+    max-width: 70vw;
+    width: 50vw;
+    margin: auto;
+}
+
+.filter h4 {
+    color: #134563;
+    margin: auto;
+    margin-top: 15px;
+    float: left;
+    font-size: 15px;
+}
+
+.filter input {
+    outline: none;
+    padding: 9px 8px;
+    margin: 10px;
+	border: 1px solid #ccc;
+    width: 45vw;
+}

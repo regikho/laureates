@@ -1,0 +1,8 @@
+.table {
+    font-size: 14px;
+    background: white;
+    max-width: 70vw;
+    width: 50vw;
+    border-collapse: collapse;
+    margin: auto;
+}
