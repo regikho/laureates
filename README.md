@@ -2,7 +2,7 @@
 
 Проект создан с помощью [Create React App](https://github.com/facebook/create-react-app).
 
-## Проект представляет собой таблицуу с именами лауреатов Нобелевской премии
+## Проект представляет собой таблицу с именами лауреатов Нобелевской премии
 
 В таблице представлены следующие данные:
 
@@ -19,4 +19,4 @@
 
 ## Скриншот проекта
 
-![screenshot](https://ibb.co/5jMpgQD)
+![screenshot](https://raw.githubusercontent.com/regikho/regikho.github.io/ad3ed813a44633b61a6fcf19d94203fe6027d440/laureates/laureates.PNG)
