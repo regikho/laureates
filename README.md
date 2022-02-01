@@ -19,3 +19,4 @@
 
 ## Скриншот проекта
 
+![screenshot](https://ibb.co/5jMpgQD)
