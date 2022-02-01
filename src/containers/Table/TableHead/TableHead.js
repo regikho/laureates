@@ -2,36 +2,42 @@ import React from 'react';
 
 import classes from './TableHead.module.css';
 
-const TableHead = ({ sortDirection, onSort }) => {
+const TableHead = ({ sortDirection, onSort, fieldName}) => {
     return (
         <thead className={classes.tableHead}> 
             <tr>
                 <td 
                     className={classes.sort}
-                    onClick={onSort}
+                    onClick={() => onSort('name')}
                 >
                     Имя лауреата{' '}
-                    <span>
-                       {sortDirection === 'asc' ? '▲' : '▼'} 
-                    </span>
+                    {fieldName === 'name' && (
+                        <span>
+                            {sortDirection === 'asc' ? '▲' : '▼'} 
+                        </span>
+                    )}
                 </td>
                 <td
                     className={classes.sort}
-                    onClick={onSort}
+                    onClick={() => onSort('date')}
                 >
                     Год получения премии{' '}
-                    <span>
-                       {sortDirection === 'asc' ? '▲' : '▼'} 
-                    </span>
+                    {fieldName === 'date' && (
+                        <span>
+                            {sortDirection === 'asc' ? '▲' : '▼'} 
+                        </span>
+                    )}
                 </td>
                 <td
                     className={classes.sort}
-                    onClick={onSort}
+                    onClick={() => onSort('field')}
                 >
                     Направление{' '}
-                    <span>
-                       {sortDirection === 'asc' ? '▲' : '▼'} 
-                    </span>
+                    {fieldName === 'field' && (
+                        <span>
+                            {sortDirection === 'asc' ? '▲' : '▼'} 
+                        </span>
+                    )}
                 </td>
                 <td>Неоднократное награждение</td>
                 <td></td>

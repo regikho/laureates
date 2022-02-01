@@ -11,7 +11,8 @@ export default class App extends Component {
   state = {
     laureates,
     filter: '',
-    sortDirection: 'asc'
+    sortDirection: 'asc',
+    fieldName: 'name'
   }
 
   handleDelete = id => {
@@ -39,9 +40,10 @@ export default class App extends Component {
     })
   }
 
-  handleSort = () => {
+  handleSort = (fieldName) => {
     this.setState({
-      sortDirection: this.state.sortDirection === 'asc' ? 'desc' : 'asc'
+      sortDirection: this.state.sortDirection === 'asc' ? 'desc' : 'asc',
+      fieldName,
     })
   }
 
@@ -59,19 +61,23 @@ export default class App extends Component {
     
     const sortedLaureates = filteredLaureates.sort(
       (a, b) => {
-        const firstName = a.name.toLowerCase().replace(/\s+/g, '');
-        const secondName = b.name.toLowerCase().replace(/\s+/g, '');
+        const fieldName = this.state.fieldName;
+
+        
+        const firstValue = typeof(a[fieldName]) === "string" ? a[fieldName].toLowerCase().replace(/\s+/g, '') : a[fieldName];
+        const secondValue = typeof(b[fieldName]) === "string" ? b[fieldName].toLowerCase().replace(/\s+/g, '') : b[fieldName];
+        
         if (sortDirection === 'asc') {
-          if (firstName > secondName) {
+          if (firstValue > secondValue) {
             return 1
-          } else if (firstName < secondName) {
+          } else if (firstValue < secondValue) {
             return -1
           }
           return 0
         } else {
-          if (firstName > secondName) {
+          if (firstValue > secondValue) {
             return -1
-          } else if (firstName < secondName) {
+          } else if (firstValue < secondValue) {
             return 1
           }
           return 0
@@ -88,6 +94,7 @@ export default class App extends Component {
         <Table 
           laureates={sortedLaureates} 
           sortDirection={this.state.sortDirection}
+          fieldName={this.state.fieldName}
           onDelete={this.handleDelete} 
           onAdd={this.handleAdd}
           onSort={this.handleSort}

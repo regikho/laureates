@@ -12,7 +12,7 @@ const TableBody = props => {
     return (
         <tbody className={classes.tableBody}>
             {props.laureates.map((laureate) => (
-            <tr>
+            <tr key={laureate.id}>
                  <td>{laureate.name}</td>
                  <td>{new Date(laureate.date * MILLISECONDS_IN_SECOND).getFullYear()}</td>
                  <td>{laureate.field}</td>
